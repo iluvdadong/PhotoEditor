@@ -1,14 +1,19 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PhotoEditor" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,8 +21,37 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bZX-rH-ffg">
+                                <rect key="frame" x="36" y="40" width="303" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="Aqk-6a-yLH"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tsz-f7-3kX">
+                                <rect key="frame" x="123" y="497" width="129" height="30"/>
+                                <state key="normal" title="Photo from Gallery"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T4T-rn-ArM">
+                                <rect key="frame" x="149" y="391" width="77" height="30"/>
+                                <state key="normal" title="Take Photo"/>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="T4T-rn-ArM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="KWs-Oi-Xdg"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="bZX-rH-ffg" secondAttribute="trailing" constant="20" id="ajR-rx-Sbs"/>
+                            <constraint firstItem="tsz-f7-3kX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cIh-9V-Enf"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="tsz-f7-3kX" secondAttribute="bottom" constant="140" id="dFe-uZ-hjf"/>
+                            <constraint firstItem="tsz-f7-3kX" firstAttribute="top" secondItem="T4T-rn-ArM" secondAttribute="bottom" constant="76" id="gFO-Sa-sLT"/>
+                            <constraint firstItem="bZX-rH-ffg" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="k7q-Ih-nD9"/>
+                            <constraint firstItem="bZX-rH-ffg" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="mAD-aH-uni"/>
+                            <constraint firstItem="bZX-rH-ffg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="yHq-Ma-AcS"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="imgView" destination="bZX-rH-ffg" id="aml-iu-LFo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

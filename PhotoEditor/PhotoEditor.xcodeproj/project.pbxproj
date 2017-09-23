@@ -54,14 +54,30 @@
 		D400C3891F76DACD0054368B /* PhotoEditor */ = {
 			isa = PBXGroup;
 			children = (
+				D400C39D1F76DB370054368B /* StoryBoard */,
+				D400C39C1F76DB280054368B /* ViewController */,
 				D400C38A1F76DACD0054368B /* AppDelegate.swift */,
-				D400C38C1F76DACD0054368B /* ViewController.swift */,
-				D400C38E1F76DACD0054368B /* Main.storyboard */,
 				D400C3911F76DACD0054368B /* Assets.xcassets */,
 				D400C3931F76DACD0054368B /* LaunchScreen.storyboard */,
 				D400C3961F76DACD0054368B /* Info.plist */,
 			);
 			path = PhotoEditor;
+			sourceTree = "<group>";
+		};
+		D400C39C1F76DB280054368B /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				D400C38C1F76DACD0054368B /* ViewController.swift */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
+		D400C39D1F76DB370054368B /* StoryBoard */ = {
+			isa = PBXGroup;
+			children = (
+				D400C38E1F76DACD0054368B /* Main.storyboard */,
+			);
+			name = StoryBoard;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
