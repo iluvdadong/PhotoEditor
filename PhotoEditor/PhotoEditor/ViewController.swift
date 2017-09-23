@@ -11,6 +11,12 @@ import UIKit
 class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
   
     @IBOutlet weak var imgView: UIImageView!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view, typically from a nib.
+    }
+
 
     @IBAction func actionClickOnCamera(sender: AnyObject) {
         
@@ -42,21 +48,22 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        
+        imgView.image = info[UIImagePickerControllerEditedImage] as? UIImage
+        dismiss(animated: true, completion: nil)
     }
-
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        dismiss(animated: true, completion: nil)
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
 
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
-        
-        imgView.imahe
-    }
-    
+ 
 
 }
 
